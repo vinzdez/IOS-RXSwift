@@ -22,50 +22,35 @@
                             <constraint firstAttribute="height" constant="120" id="kTv-Tj-Kby"/>
                         </constraints>
                     </imageView>
-                    <view clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zoG-5Z-Rex">
-                        <rect key="frame" x="93" y="100" width="53" height="24"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ID : 1" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1uo-15-eam">
-                                <rect key="frame" x="13" y="6" width="34" height="14"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="AppleColorEmoji" family="Apple Color Emoji" pointSize="6"/>
-                                <color key="textColor" red="0.99989169840000003" green="1" blue="0.99988085029999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
-                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                <integer key="value" value="35"/>
-                            </userDefinedRuntimeAttribute>
-                        </userDefinedRuntimeAttributes>
-                    </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lorem ipsum dolor set amerasdasdasdasdasdasdasdasdasd" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O1d-Fv-W32">
                         <rect key="frame" x="175" y="58" width="251" height="29"/>
                         <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="12"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TJK-Pa-fmB">
+                        <rect key="frame" x="90.5" y="95" width="42.5" height="24"/>
+                        <state key="normal" title="Button"/>
+                        <buttonConfiguration key="configuration" style="filled" title="ID: 2">
+                            <fontDescription key="titleFontDescription" type="system" pointSize="8"/>
+                            <color key="baseBackgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </buttonConfiguration>
+                    </button>
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="O1d-Fv-W32" secondAttribute="trailing" constant="7" id="7U6-FK-3Eq"/>
-                    <constraint firstItem="zoG-5Z-Rex" firstAttribute="leading" secondItem="FET-EY-Nqi" secondAttribute="leading" constant="93" id="AMV-94-xDE"/>
-                    <constraint firstAttribute="bottom" secondItem="zoG-5Z-Rex" secondAttribute="bottom" constant="9" id="Ba1-BJ-HAl"/>
                     <constraint firstItem="64b-eV-l2m" firstAttribute="leading" secondItem="FET-EY-Nqi" secondAttribute="leading" constant="10" id="FsS-6t-Ky5"/>
                     <constraint firstItem="O1d-Fv-W32" firstAttribute="leading" secondItem="64b-eV-l2m" secondAttribute="trailing" constant="21" id="FxO-KP-MUT"/>
                     <constraint firstAttribute="bottom" secondItem="O1d-Fv-W32" secondAttribute="bottom" constant="48" id="Kgv-bB-vnt"/>
-                    <constraint firstAttribute="trailing" secondItem="zoG-5Z-Rex" secondAttribute="trailing" constant="285" id="Zdp-et-CPu"/>
-                    <constraint firstItem="zoG-5Z-Rex" firstAttribute="top" secondItem="FET-EY-Nqi" secondAttribute="top" constant="100" id="e0n-hV-K0B"/>
                     <constraint firstAttribute="bottom" secondItem="64b-eV-l2m" secondAttribute="bottom" constant="12" id="lbN-dj-7ib"/>
+                    <constraint firstItem="O1d-Fv-W32" firstAttribute="leading" secondItem="TJK-Pa-fmB" secondAttribute="trailing" constant="42" id="njA-PJ-gWu"/>
                     <constraint firstItem="64b-eV-l2m" firstAttribute="top" secondItem="FET-EY-Nqi" secondAttribute="top" constant="10" id="txV-bc-uC3"/>
                     <constraint firstItem="O1d-Fv-W32" firstAttribute="top" secondItem="FET-EY-Nqi" secondAttribute="top" constant="58" id="u3s-Hb-uE4"/>
+                    <constraint firstItem="TJK-Pa-fmB" firstAttribute="top" secondItem="O1d-Fv-W32" secondAttribute="bottom" constant="8" id="zsa-zA-3xx"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
                 <outlet property="imgPhoto" destination="64b-eV-l2m" id="xWZ-3Q-svm"/>
-                <outlet property="photoIdLbl" destination="1uo-15-eam" id="t1D-X1-ht7"/>
-                <outlet property="photoIdView" destination="zoG-5Z-Rex" id="5sf-6z-Zst"/>
                 <outlet property="photoLbl" destination="O1d-Fv-W32" id="SI0-Er-9Pc"/>
             </connections>
             <point key="canvasLocation" x="-86.231884057971016" y="11.049107142857142"/>
