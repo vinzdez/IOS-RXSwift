@@ -10,13 +10,16 @@ import Foundation
 import RxSwift
 import RxCocoa
 
-class PhotoVC : UIViewController{
+class PhotoVC : UIViewController  {
 	
 	@IBOutlet var photoTableView: UITableView!
 	
 	private let disposeBag = DisposeBag()
 	var photoVm = PhotoViewModel()
 	var photoList = BehaviorRelay<[PhotoModel]>(value:[])
+	
+	var activityIndicator: UIActivityIndicatorView!
+	var viewActivityIndicator: UIView!
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
@@ -40,13 +43,17 @@ class PhotoVC : UIViewController{
 			cell.cellPhoto = photo
 		}.disposed(by: disposeBag)
 		
-		self.photoTableView.rx.willDisplayCell
-			.subscribe(onNext: ({ (cell,indexPath) in
-				//cell.alpha = 0
-				//let transform = CATransform3DTranslate(CATransform3DIdentity, -250, 0, 0)
-				//cell.layer.transform = transform
-			})).disposed(by: disposeBag)
-		
+		self.photoTableView.rx.itemSelected.subscribe(onNext: {[weak self] indexPath in
+			let cell = self?.photoTableView.cellForRow(at: indexPath) as? PhotoCell
+			let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+			let photoDetail = storyBoard.instantiateViewController(withIdentifier: "photoDetailVC") as! PhotoDetailVC
+			photoDetail.photoImg.accept((cell?.cellPhoto.url)!)
+			photoDetail.photoTitle.accept((cell?.cellPhoto.title)!)
+			self?.navigationController?.pushViewController(photoDetail, animated: false)
+			
+		}).disposed(by: disposeBag)
 	
 	}
+	
+	
 }

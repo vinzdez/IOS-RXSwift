@@ -29,10 +29,17 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TJK-Pa-fmB">
-                        <rect key="frame" x="90.5" y="95" width="42.5" height="24"/>
+                        <rect key="frame" x="111" y="91" width="22" height="11"/>
                         <state key="normal" title="Button"/>
-                        <buttonConfiguration key="configuration" style="filled" title="ID: 2">
-                            <fontDescription key="titleFontDescription" type="system" pointSize="8"/>
+                        <buttonConfiguration key="configuration" style="filled" buttonSize="small" titleAlignment="center">
+                            <attributedString key="attributedTitle">
+                                <fragment content="ID: 2">
+                                    <attributes>
+                                        <font key="NSFont" size="1" name="AppleSDGothicNeo-Regular"/>
+                                        <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                    </attributes>
+                                </fragment>
+                            </attributedString>
                             <color key="baseBackgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </buttonConfiguration>
                     </button>
@@ -46,11 +53,12 @@
                     <constraint firstItem="O1d-Fv-W32" firstAttribute="leading" secondItem="TJK-Pa-fmB" secondAttribute="trailing" constant="42" id="njA-PJ-gWu"/>
                     <constraint firstItem="64b-eV-l2m" firstAttribute="top" secondItem="FET-EY-Nqi" secondAttribute="top" constant="10" id="txV-bc-uC3"/>
                     <constraint firstItem="O1d-Fv-W32" firstAttribute="top" secondItem="FET-EY-Nqi" secondAttribute="top" constant="58" id="u3s-Hb-uE4"/>
-                    <constraint firstItem="TJK-Pa-fmB" firstAttribute="top" secondItem="O1d-Fv-W32" secondAttribute="bottom" constant="8" id="zsa-zA-3xx"/>
+                    <constraint firstItem="TJK-Pa-fmB" firstAttribute="top" secondItem="O1d-Fv-W32" secondAttribute="bottom" constant="4" id="zsa-zA-3xx"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
                 <outlet property="imgPhoto" destination="64b-eV-l2m" id="xWZ-3Q-svm"/>
+                <outlet property="photoIdBtn" destination="TJK-Pa-fmB" id="GaJ-gQ-cyR"/>
                 <outlet property="photoLbl" destination="O1d-Fv-W32" id="SI0-Er-9Pc"/>
             </connections>
             <point key="canvasLocation" x="-86.231884057971016" y="11.049107142857142"/>

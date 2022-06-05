@@ -10,17 +10,14 @@ import Kingfisher
 
 class PhotoCell : UITableViewCell{
 	
-	//@IBOutlet weak var photoIdLbl: UILabel!
 	@IBOutlet weak var photoLbl: UILabel!
 	@IBOutlet weak var imgPhoto: UIImageView!
-	//@IBOutlet weak var photoIdView: UIView!
+	@IBOutlet weak var photoIdBtn: UIButton!
 	
 	var cellPhoto : PhotoModel! {
 		didSet{
 			self.photoLbl.text = cellPhoto.title
-			//self.photoIdLbl.text = String(cellPhoto.id)
-			//self.photoIdView.clipsToBounds = true
-			//self.photoIdView.layer.cornerRadius = 4
+			self.photoIdBtn.setTitle("ID:"+String(cellPhoto.id), for: .normal)
 			let url = URL(string:cellPhoto.thumbnailUrl)
 			self.imgPhoto.kf.setImage(with: url)
 		}
